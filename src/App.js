@@ -177,8 +177,8 @@ function App() {
 												) : (
 													<div>
 														<p>
-															Chi phí dự án đang lỗ CV = <b>{CV}$</b> và CPI ={" "}
-															<b>{CPI * 100}%</b>
+															Chi phí dự án đang lỗ CV = <b>{CV * -1}$</b> và
+															CPI = <b>{CPI * 100}%</b>
 														</p>
 													</div>
 												)}
