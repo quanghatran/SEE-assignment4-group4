@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import CustomInput from "../controls/CustomInput";
 import SendIcon from "@mui/icons-material/Send";
-import { Button, Paper } from "@mui/material";
+import { Button, Paper, Typography } from "@mui/material";
 import { useState } from "react";
 import { Box } from "@mui/system";
 import TextField from "@mui/material/TextField";
@@ -40,19 +40,86 @@ const CalculateG = () => {
 				<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
 					<Grid container item xs={12} sm={6}>
 						<Grid item xs={12}>
-							<h3>TÍNH ĐIỂM CỦA TỪNG TÁC NHÂN</h3>
-							<TAWComponent />
+							<h2 style={{ marginBottom: "2rem" }}>INPUT VALUES</h2>
+							<Grid container spacing={2}>
+								<Grid item xs={6}>
+									<Typography variant='button' display='block' gutterBottom>
+										The days of the project
+									</Typography>
+									<TextField
+										id='outlined-basic'
+										label='Days'
+										variant='outlined'
+									/>
+								</Grid>
+								<Grid item xs={6}>
+									<Typography variant='button' display='block' gutterBottom>
+										The unit
+									</Typography>
+									<TextField
+										id='outlined-basic'
+										label='($)'
+										variant='outlined'
+									/>
+								</Grid>
+								<Grid item xs={6}>
+									<Typography variant='button' display='block' gutterBottom>
+										Budgeted cost of work scheduled
+									</Typography>
+									<TextField
+										id='outlined-basic'
+										label='BCWS'
+										variant='outlined'
+									/>
+								</Grid>
+								<Grid item xs={6}>
+									<Typography variant='button' display='block' gutterBottom>
+										Actual cost of work performed
+									</Typography>
+									<TextField
+										id='outlined-basic'
+										label='ACWP'
+										variant='outlined'
+									/>
+								</Grid>
+								<Grid item xs={6}>
+									<Typography variant='button' display='block' gutterBottom>
+										Budgeted cost of work performed
+									</Typography>
+									<TextField
+										id='outlined-basic'
+										label='BCWP'
+										variant='outlined'
+									/>
+								</Grid>
+								<Grid item xs={6}>
+									<Typography variant='button' display='block' gutterBottom>
+										Budgeted cost at completion
+									</Typography>
+									<TextField
+										id='outlined-basic'
+										label='BAC'
+										variant='outlined'
+									/>
+								</Grid>
+							</Grid>
+							<Button
+								style={{ marginTop: "2rem" }}
+								size='large'
+								variant='contained'>
+								Calculate
+							</Button>
 						</Grid>
 					</Grid>
 					<Grid container item xs={12} sm={6}>
 						<Grid item xs={12}>
-							<h3>TÍNH ĐIỂM CÁC TRƯỜNG HỢP SỬ DỤNG</h3>
+							<h2 style={{ marginBottom: "2rem" }}>OUTPUT</h2>
 							<TBFComponent />
 						</Grid>
 					</Grid>
 				</Grid>
 			</Box>
-			<div>
+			{/* <div>
 				<h4>
 					<Button
 						className='button-check'
@@ -64,7 +131,7 @@ const CalculateG = () => {
 					</Button>
 					G = 1.4 x E x P x H = {resultG === null ? "..." : resultG}
 				</h4>
-			</div>
+			</div> */}
 		</Paper>
 	);
 };

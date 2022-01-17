@@ -17,6 +17,7 @@ const CustomSelect = (props) => {
 				labelId='demo-simple-select-label'
 				id='demo-simple-select'
 				defaultValue=''
+				size='small'
 				value={value}
 				onChange={handleValueChange}>
 				{listSelection.length > 0

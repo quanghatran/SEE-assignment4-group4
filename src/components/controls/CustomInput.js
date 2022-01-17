@@ -1,9 +1,11 @@
 import TextField from "@mui/material/TextField";
 
 const CustomInput = (props) => {
-	const { id, label, placeholder, value, name, onCustomInputChange } = props;
+	const { id, label, placeholder, value, name, onCustomInputChange, style } =
+		props;
 	return (
 		<TextField
+			fullWidth
 			required
 			id={id}
 			label={label}
@@ -12,6 +14,7 @@ const CustomInput = (props) => {
 			name={name}
 			value={value}
 			onChange={onCustomInputChange}
+			style={style}
 		/>
 	);
 };
